@@ -1,4 +1,3 @@
-
 mod parser {
     use thiserror::Error;
 
@@ -24,6 +23,10 @@ mod parser {
 
 fn main() -> anyhow::Result<()> {
     parser::parse("1234a")?;
+
+    std::fs::File::create("foo.txt")?;
+
+    std::env::var("FOO")?;
 
     Ok(())
 }

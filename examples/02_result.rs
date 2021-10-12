@@ -10,4 +10,3 @@ fn main() {
     std::net::TcpStream::connect("localhost:12345").unwrap();
     std::net::TcpStream::connect("localhost:12345").expect("Failed to connect");
 }
-
