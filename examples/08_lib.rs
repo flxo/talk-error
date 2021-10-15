@@ -1,3 +1,5 @@
+// Why not anyhow::Result?
+
 mod parser {
     pub fn parse(s: &str) -> Result<u32, String> {
         match s.parse::<u32>() {
