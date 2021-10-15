@@ -12,6 +12,7 @@ fn main() {
 
 fn run() -> Result<()> {
     let somestring = std::env::args().nth(1).context("Failed to read argv[1]")?;
+
     somestring
         .parse::<u32>()
         .with_context(|| format!("Failed to parse {}", somestring))?;
