@@ -22,14 +22,18 @@ mod parser {
 }
 
 fn main() -> anyhow::Result<()> {
+    // Return with parser::Error on error
+    parser::parse("12345")?;
+
+    // Process parsing error with custom error type
     match parser::parse("1234a") {
         Ok(v) => println!("Parsed {}", v),
         Err(parser::Error::Empty) => println!("Failed to parse empty string"),
         Err(parser::Error::ParseError(e)) => println!("Failed to parse: {}", e),
     }
 
+    // Something else that returns Result<T, impl Into<anyhow::Error>>
     std::fs::File::create("foo.txt")?;
-
     std::env::var("FOO")?;
 
     Ok(())
