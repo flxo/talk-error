@@ -1,9 +1,7 @@
 /*
-
-https://doc.rust-lang.org/std/result/enum.Result.html#
-https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap
-https://doc.rust-lang.org/std/result/enum.Result.html#method.expect
-
+    https://doc.rust-lang.org/std/result/enum.Result.html#
+    https://doc.rust-lang.org/std/result/enum.Result.html#method.unwrap
+    https://doc.rust-lang.org/std/result/enum.Result.html#method.expect
 */
 
 fn main() {
